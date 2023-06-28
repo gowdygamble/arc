@@ -1,0 +1,42 @@
+todo
+
+should come up with like an initialize rule thing
+so the config can have certain elements set programatically and vary within a run
+
+load rules automatically from a list of files, rather than importing each
+    so each rule script needs to have a func with the same name that gets called?
+
+more rules
+
+example set to training data adapter
+save training data
+visualize training data
+
+
+----
+
+
+data structure
+
+Rule: describes how to make a set of input output pairs
+    has to be a set since some rules operate at the set level!
+Example: Input/output of a specific rule
+Example Set: a set of input/output pairs 
+Training Example Set: an example set with the output pair of the last example cut off to use as a label
+
+
+
+----
+
+speculation + notes
+
+will there be a self-supervised prediction step?
+or just go right to the 'supervised' step?
+I mean, in a way, training on example sets is like self completion since theyre sequences...
+
+
+so how do you specify a rule?
+a config and a function
+
+then point at the file that contains both
+instantiate Role objects from those two
